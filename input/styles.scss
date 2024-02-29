@@ -11,21 +11,26 @@ $default-font: 'KodeMono-VariableFont_wght';
     src: url(../assets/fonts/Kode_Mono/KodeMono-VariableFont_wght.ttf);
 }
 
-header.pageTitle{
-
-    h1.title{
-        
-    }
-}
 
 *{
     margin: 0;
+    font-family: $default-font;
 }
 
 html{
     box-sizing: border-box;
 }
+body{
+    background-image: url(../assets/images/Circuit-Board-Mobile.svg);
+    object-fit: cover;
+    background-position: center;
+}
+header.pageTitle{
 
+    h1.title{
+
+    }
+}
 
 .calculatorContainer{
 

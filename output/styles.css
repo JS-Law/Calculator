@@ -4,10 +4,17 @@
 }
 * {
   margin: 0;
+  font-family: "KodeMono-VariableFont_wght";
 }
 
 html {
   box-sizing: border-box;
+}
+
+body {
+  background-image: url(../assets/images/Circuit-Board-Mobile.svg);
+  object-fit: cover;
+  background-position: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
