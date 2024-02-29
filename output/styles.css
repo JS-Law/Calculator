@@ -2,5 +2,12 @@
   font-family: "KodeMono-VariableFont_wght";
   src: url(../assets/fonts/Kode_Mono/KodeMono-VariableFont_wght.ttf);
 }
+* {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
 
 /*# sourceMappingURL=styles.css.map */
