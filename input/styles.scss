@@ -21,27 +21,50 @@ html{
     box-sizing: border-box;
 }
 body{
-    background-image: url(../assets/images/Circuit-Board-Mobile.svg);
+    background-image: url(../assets/images/Rect\ Light.svg);
     object-fit: cover;
-    background-position: center;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 header.pageTitle{
-
+    padding: 1rem;
+    text-align: center;
+    color: $taupe;
+    border-bottom: 2px solid $taupe;
     h1.title{
 
     }
 }
 
 .calculatorContainer{
-
+    background-color: $battleship-gray;
+    margin-block: 3rem;
+    padding: 1.5rem;
+    border-radius: .5rem;
     .numField{
-
+        height: 3rem;
+        background-color: $silver;
+        border-radius: .4rem;
+        margin-bottom: 1rem;
     }
 }
 
 .calcRow{
-
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-block-end: 1rem;
     .calcBtn{
-
+        border-radius: .4rem;
+        padding-block: .5rem;
+        padding-inline: 1rem;
+        font-size: 1.2rem;
+        border-color: $melon;
+    }
+    #zero{
+        padding-inline: 3.35rem;
     }
 }
