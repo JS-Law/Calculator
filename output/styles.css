@@ -55,7 +55,13 @@ header.pageTitle {
   border-color: #E0AFA0;
 }
 .calcRow #zero {
-  padding-inline: 3.35rem;
+  padding-inline: 3.05rem;
+}
+.calcRow #negate {
+  padding-inline: 0.3rem;
+}
+.calcRow #AC {
+  padding-inline: 0.6rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
