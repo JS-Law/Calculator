@@ -13,3 +13,9 @@
 //  - "AC" clears the numField
 //  - "Negate" appends a "-" to the front of the integer
 //  - "Equals" computes the equation and provides the solution.
+
+document.querySelectorAll('.calcBtn').forEach(button => {
+    button.addEventListener('click', function() {
+        console.log(this.id + " - clicked")
+    });
+});
