@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-image: url(../assets/images/Rect\ Light.svg);
+  background-image: url(../assets/images/hollowed-boxes.svg);
   object-fit: cover;
 }
 
@@ -25,22 +25,37 @@ main {
 header.pageTitle {
   padding: 1rem;
   text-align: center;
-  color: #463F3A;
-  border-bottom: 2px solid #463F3A;
+  width: 100%;
+  color: #012A36;
+  background-color: rgba(255, 85, 0, 0.768627451);
+  border-bottom: 2px solid #012A36;
 }
 .calculatorContainer {
-  background-color: #8A817C;
+  animation: myAnim 1s ease 0s 1 normal forwards;
+  background-color: rgba(255, 85, 0, 0.768627451);
+  border: 2px solid #273B09;
   margin-block: 3rem;
   padding: 1.5rem;
   border-radius: 0.5rem;
 }
 .calculatorContainer .numField {
+  border: 2px solid hsl(75, 26%, 48%);
   height: 3rem;
-  background-color: #BCB8B1;
+  background-color: rgba(223, 255, 79, 0.6235294118);
   border-radius: 0.4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .calcRow {
   display: flex;
   justify-content: space-between;
@@ -52,7 +67,8 @@ header.pageTitle {
   padding-block: 0.5rem;
   padding-inline: 1rem;
   font-size: 1.2rem;
-  border-color: #E0AFA0;
+  border-color: #273B09;
+  background-color: #E6A817;
 }
 .calcRow #zero {
   padding-inline: 3.05rem;

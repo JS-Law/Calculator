@@ -1,10 +1,30 @@
 // Variables
-$taupe: #463F3A;
-$battleship-gray: #8A817C;
-$silver: #BCB8B1;
-$isabelline: #F4F3EE;
-$melon: #E0AFA0;
+
+// Palette One
+// $taupe: #463F3A;
+// $battleship-gray: #8A817C;
+// $silver: #BCB8B1;
+// $isabelline: #F4F3EE;
+// $melon: #E0AFA0;
+$chartreuse: #dfff4f9f;
+
+// $jasmine: #F4D06F;
+// $tiffany-blue: #9DD9D2;
+$floral-white: #fff8f0ce;
+$moss-green: hsl(75, 26%, 48%);
+$melon: #FDBCB4;
+$harvest-gold: #E6A817;
+$gun-metal: #012A36;
+$pakistan-green: #273B09;
+$orange: #ff5500c4;
+
 $default-font: 'KodeMono-VariableFont_wght';
+// Palette Two
+
+
+
+
+
 
 @font-face {
     font-family: 'KodeMono-VariableFont_wght';
@@ -21,7 +41,10 @@ html{
     box-sizing: border-box;
 }
 body{
-    background-image: url(../assets/images/Rect\ Light.svg);
+    // background-image: url(../assets/images/Rect\ Light.svg);
+    background-image: url(../assets/images/hollowed-boxes.svg);
+    // background-image: url(../assets/images/alternating-arrowhead.svg);
+    // background-image: url(../assets/images/wavey-fingerprint.svg);
     object-fit: cover;
 }
 main{
@@ -29,26 +52,43 @@ main{
     flex-direction: column;
     align-items: center;
 }
+
 header.pageTitle{
     padding: 1rem;
     text-align: center;
-    color: $taupe;
-    border-bottom: 2px solid $taupe;
+    width: 100%;
+    color: $gun-metal;
+    background-color: $orange;
+    border-bottom: 2px solid $gun-metal;
     h1.title{
-
+        
     }
 }
 
 .calculatorContainer{
-    background-color: $battleship-gray;
+    animation: myAnim 1s ease 0s 1 normal forwards;
+    background-color: $orange;
+    border: 2px solid $pakistan-green;
     margin-block: 3rem;
     padding: 1.5rem;
     border-radius: .5rem;
     .numField{
+        border: 2px solid $moss-green;
         height: 3rem;
-        background-color: $silver;
+        background-color: $chartreuse;
         border-radius: .4rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+@keyframes myAnim {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -62,7 +102,9 @@ header.pageTitle{
         padding-block: .5rem;
         padding-inline: 1rem;
         font-size: 1.2rem;
-        border-color: $melon;
+        border-color: $pakistan-green;
+        background-color: $harvest-gold;
+        // border-color: $melon;
     }
     #zero{
         padding-inline: 3.05rem;
