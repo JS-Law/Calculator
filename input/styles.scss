@@ -19,9 +19,14 @@ $pakistan-green: #273B09;
 $orange: #ff5500c4;
 
 $default-font: 'KodeMono-VariableFont_wght';
+$calc-font: 'DS-DIGIT';
+
 // Palette Two
 
-
+@font-face {
+    font-family: 'DS-DIGIT';
+    src: url(../assets/fonts/ds_digital/DS-DIGI.TTF);
+}
 
 
 
@@ -78,6 +83,7 @@ header.pageTitle{
         background-color: $chartreuse;
         border-radius: .4rem;
         margin-bottom: 2rem;
+        font-family: $calc-font;
     }
 }
 @keyframes myAnim {

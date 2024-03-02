@@ -1,4 +1,8 @@
 @font-face {
+  font-family: "DS-DIGIT";
+  src: url(../assets/fonts/ds_digital/DS-DIGI.TTF);
+}
+@font-face {
   font-family: "KodeMono-VariableFont_wght";
   src: url(../assets/fonts/Kode_Mono/KodeMono-VariableFont_wght.ttf);
 }
@@ -44,6 +48,7 @@ header.pageTitle {
   background-color: rgba(223, 255, 79, 0.6235294118);
   border-radius: 0.4rem;
   margin-bottom: 2rem;
+  font-family: "DS-DIGIT";
 }
 
 @keyframes myAnim {
