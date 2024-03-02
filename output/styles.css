@@ -44,17 +44,25 @@ header.pageTitle {
 }
 .calculatorContainer .numField {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   flex-wrap: wrap;
+  flex-direction: column;
   font-size: 2.5rem;
   padding-inline: 0.5rem;
-  align-items: center;
+  align-items: end;
   border: 2px solid hsl(75, 26%, 48%);
-  height: 3rem;
+  min-height: 4rem;
   background-color: rgba(223, 255, 79, 0.6235294118);
   border-radius: 0.4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  max-width: 227px;
+  overflow-wrap: break-word;
+}
+.calculatorContainer .numField .field {
+  display: block;
+  overflow-wrap: break-word;
   font-family: "DS-DIGIT";
+  max-width: 227px;
 }
 
 @keyframes myAnim {

@@ -79,18 +79,27 @@ header.pageTitle{
     border-radius: .5rem;
     .numField{
         display: flex;
-        justify-content: end;
+        justify-content: center;
         flex-wrap: wrap;
+        flex-direction: column;
         font-size: 2.5rem;
         padding-inline: .5rem;
-        align-items: center;
+        align-items: end;
         border: 2px solid $moss-green;
-        height: 3rem;
+        min-height: 4rem;
         background-color: $chartreuse;
         border-radius: .4rem;
-        margin-bottom: 2rem;
-        font-family: $calc-font;
+        margin-bottom: 1.5rem;
+        // max-width: 227px;
+        max-width: 227px;
+        overflow-wrap: break-word;
+        .field{
+            display: block;
+            overflow-wrap: break-word;
+            font-family: $calc-font;
+            max-width: 227px;
 
+        }
     }
 }
 @keyframes myAnim {

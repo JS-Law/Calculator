@@ -17,10 +17,16 @@ let prevNum = []
 document.querySelectorAll('.calcBtn').forEach(button => {
     button.addEventListener('click', function() {
         let numField = document.querySelector('.numField');
-        let num = this.getAttribute('data-target')
-        numField.textContent = num;
+        let field = document.querySelector('.field');
+        let num = this.getAttribute('data-target');
         prevNum.push(num)
+        if (prevNum.length <= 22) {
+            field.textContent = num;
+            field.textContent = prevNum.join("");
+        } else {
+            console.log("Error Cannot Exceed 22 digits")
+        }
+        
         console.log(this.id + " - clicked")
-        numField.textContent = prevNum.join("");
     });
 });
