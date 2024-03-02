@@ -43,6 +43,12 @@ header.pageTitle {
   border-radius: 0.5rem;
 }
 .calculatorContainer .numField {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  font-size: 2.5rem;
+  padding-inline: 0.5rem;
+  align-items: center;
   border: 2px solid hsl(75, 26%, 48%);
   height: 3rem;
   background-color: rgba(223, 255, 79, 0.6235294118);

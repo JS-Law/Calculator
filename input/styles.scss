@@ -78,12 +78,19 @@ header.pageTitle{
     padding: 1.5rem;
     border-radius: .5rem;
     .numField{
+        display: flex;
+        justify-content: end;
+        flex-wrap: wrap;
+        font-size: 2.5rem;
+        padding-inline: .5rem;
+        align-items: center;
         border: 2px solid $moss-green;
         height: 3rem;
         background-color: $chartreuse;
         border-radius: .4rem;
         margin-bottom: 2rem;
         font-family: $calc-font;
+
     }
 }
 @keyframes myAnim {
