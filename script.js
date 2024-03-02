@@ -14,6 +14,21 @@
 //  - "Negate" appends a "-" to the front of the integer
 //  - "Equals" computes the equation and provides the solution.
 let prevNum = []
+let clear = []
+
+let clearField = function(arr) {
+
+}
+
+let negateNum = function(arr) {
+
+}
+
+
+let calculate = function(arr) {
+
+}
+
 document.querySelectorAll('.calcBtn').forEach(button => {
     button.addEventListener('click', function() {
         let numField = document.querySelector('.numField');
@@ -21,12 +36,27 @@ document.querySelectorAll('.calcBtn').forEach(button => {
         let num = this.getAttribute('data-target');
         prevNum.push(num)
         if (prevNum.length <= 22) {
-            field.textContent = num;
-            field.textContent = prevNum.join("");
+            if (num === 'AC') {
+                prevNum.splice(0, prevNum.length)
+                field.textContent = clear;
+            } else if (num === 'negate') {
+                console.log("Negate works")
+                prevNum.pop()
+            } else if (num === '=') {
+                console.log("Equals works")
+                prevNum.pop()
+            } else {
+                field.textContent = num;
+                field.textContent = prevNum.join("");
+            }
         } else {
             console.log("Error Cannot Exceed 22 digits")
+            if (num === 'AC') {
+                prevNum.splice(0, prevNum.length)
+                field.textContent = clear;
+            }
         }
-        
-        console.log(this.id + " - clicked")
+        console.log(prevNum)
+        // console.log(this.id + " - clicked")
     });
 });

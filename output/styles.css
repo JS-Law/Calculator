@@ -51,7 +51,7 @@ header.pageTitle {
   padding-inline: 0.5rem;
   align-items: end;
   border: 2px solid hsl(75, 26%, 48%);
-  min-height: 4rem;
+  min-height: 3rem;
   background-color: rgba(223, 255, 79, 0.6235294118);
   border-radius: 0.4rem;
   margin-bottom: 1.5rem;
