@@ -1,35 +1,21 @@
 // Variables
 
-// Palette One
-// $taupe: #463F3A;
-// $battleship-gray: #8A817C;
-// $silver: #BCB8B1;
-// $isabelline: #F4F3EE;
-// $melon: #E0AFA0;
-$chartreuse: #dfff4f9f;
+// Palette
+$almond: #f1dac4d3;
+$turqoise: #2DE1C2;
+$tiffany-blue: #6AD5CB;
+$jet: #39393a9e;
+$jet-regular: #39393a;
+$fern-green:#566E3D;
 
-// $jasmine: #F4D06F;
-// $tiffany-blue: #9DD9D2;
-$floral-white: #fff8f0ce;
-$moss-green: hsl(75, 26%, 48%);
-$melon: #FDBCB4;
-$harvest-gold: #E6A817;
-$gun-metal: #012A36;
-$pakistan-green: #273B09;
-$orange: #ff5500c4;
-
+// Font
 $default-font: 'KodeMono-VariableFont_wght';
 $calc-font: 'DS-DIGIT';
-
-// Palette Two
 
 @font-face {
     font-family: 'DS-DIGIT';
     src: url(../assets/fonts/ds_digital/DS-DIGI.TTF);
 }
-
-
-
 
 @font-face {
     font-family: 'KodeMono-VariableFont_wght';
@@ -37,6 +23,8 @@ $calc-font: 'DS-DIGIT';
 }
 
 
+
+// Rules
 *{
     margin: 0;
     font-family: $default-font;
@@ -46,10 +34,7 @@ html{
     box-sizing: border-box;
 }
 body{
-    // background-image: url(../assets/images/Rect\ Light.svg);
-    background-image: url(../assets/images/hollowed-boxes.svg);
-    // background-image: url(../assets/images/alternating-arrowhead.svg);
-    // background-image: url(../assets/images/wavey-fingerprint.svg);
+    background-image: url(../assets/images/nnnoise.svg);
     object-fit: cover;
 }
 main{
@@ -62,21 +47,32 @@ header.pageTitle{
     padding: 1rem;
     text-align: center;
     width: 100%;
-    color: $gun-metal;
-    background-color: $orange;
-    border-bottom: 2px solid $gun-metal;
+    color: $jet-regular;
+    background-color: $jet;
+    background-image: url(../assets/images/nnnoise.svg);
+    border: 2px solid $fern-green;
+    -webkit-box-shadow: 0px 10px 67px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 67px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 67px -6px rgba(0,0,0,0.75);
+    // border-bottom: 2px solid $gun-metal;
     h1.title{
-        
+        text-shadow: 4px 1px 23px rgba(33, 33, 33, 1);
+        font-size: 2rem;
+
     }
 }
 
 .calculatorContainer{
     animation: myAnim 1s ease 0s 1 normal forwards;
-    background-color: $orange;
-    border: 2px solid $pakistan-green;
+    background-color: $jet;
+    background-image: url(../assets/images/nnnoise.svg);
+    border: 2px solid $fern-green;
     margin-block: 3rem;
     padding: 1.5rem;
     border-radius: .5rem;
+    -webkit-box-shadow: 0px 10px 67px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 67px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 67px -6px rgba(0,0,0,0.75);
     .numField{
         display: flex;
         justify-content: center;
@@ -85,9 +81,9 @@ header.pageTitle{
         font-size: 2.5rem;
         padding-inline: .5rem;
         align-items: end;
-        border: 2px solid $moss-green;
+        border: 2px solid $jet;
         min-height: 3rem;
-        background-color: $chartreuse;
+        background-color: rgba(245, 245, 245, 0.797);
         border-radius: .4rem;
         margin-bottom: 1.5rem;
         // max-width: 227px;
@@ -124,9 +120,8 @@ header.pageTitle{
         padding-block: .5rem;
         padding-inline: 1rem;
         font-size: 1.2rem;
-        border-color: $pakistan-green;
-        background-color: $harvest-gold;
-        // border-color: $melon;
+        background-color: white;
+        background-image: url(../assets/images/nnnoiseTiff.svg);
     }
     #zero{
         padding-inline: 3.05rem;

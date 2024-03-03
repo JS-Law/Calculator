@@ -26,7 +26,7 @@ document.querySelectorAll('.calcBtn').forEach(button => {
                 nums.pop()
                 secondOperand = nums.join("");
                 field.textContent = calculate(firstOperand, secondOperand, operator);
-                // displayValue.pop()
+                secondOperand = result;
             } else if (num === 'x') {
                 operator = num;
                 nums.pop();
@@ -68,8 +68,7 @@ document.querySelectorAll('.calcBtn').forEach(button => {
                 field.textContent = clear;
             }
         }
-        // console.log(p)
-        // console.log(this.id + " - clicked")
+
     });
 });
 
@@ -86,11 +85,11 @@ let divide = function(firstOperand, secondOperand) {
     return parseFloat(firstOperand) / parseFloat(secondOperand);
 }
 
-let multiply = function(arr) {
+let multiply = function(firstOperand, secondOperand) {
     return parseFloat(firstOperand) * parseFloat(secondOperand)
 }
 
-let modulo = function(arr) {
+let modulo = function(firstOperand, secondOperand) {
     return parseFloat(firstOperand) % parseFloat(secondOperand)
 }
 
@@ -114,10 +113,12 @@ let calculate = function(firstOperand, secondOperand, operation) {
         case '%':
             result = modulo(firstOperand, secondOperand);
             break;
-        case 'xx':
-            result = exponentiate(firstOperand, secondOperand)
+        case '-':
+            result = subract(firstOperand, secondOperand)
+            break;
         case 'negate':
             result = negateNum()
+            break;
     }
     return result;
 };
