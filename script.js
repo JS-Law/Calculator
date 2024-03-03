@@ -13,50 +13,96 @@
 //  - "AC" clears the numField
 //  - "Negate" appends a "-" to the front of the integer
 //  - "Equals" computes the equation and provides the solution.
-let prevNum = []
-let clear = []
+let displayValue = [];
+let clear = [];
+let firstOperand = null;
+let secondOperand = null;
+let operator = null
+let result = null;
 
-let clearField = function(arr) {
 
+// FOR LATER: MY ISSUE RIGHT NOW IS THAT I AM USING THE SAME ARRAY TO DISPLAY AND MAKE CALCULATIONS ON
+//  I NEED TO SEPARATE THE TWO IN ORDER TO KEEP THE DATA CLEAN
+// LISTENER
+document.querySelectorAll('.calcBtn').forEach(button => {
+    button.addEventListener('click', function() {
+        let display = document.querySelector('.numField');
+        let field = document.querySelector('.field');
+        let num = this.getAttribute('data-target');
+        displayValue.push(num)
+        if (displayValue.length <= 22) {
+            if (num === 'AC') {
+                clearField(field, displayValue)
+            } else if (num === 'negate') {
+                console.log("Negate works")
+                displayValue.pop()
+            } else if (num === '=') {
+                secondOperand = num
+                displayValue.textContent = calculate(firstOperand, secondOperand);
+                // displayValue.pop()
+            } else if (num === 'x') {
+                firstOperand = displayValue.join("");
+            } else if (num === '-') {
+
+            } else if (num === '%') {
+
+            } else if (num === '+') {
+                displayValue.pop();
+                firstOperand = displayValue.join("");
+                clearField(field, displayValue);
+
+            } else {
+                field.textContent = num;
+                field.textContent = displayValue.join("");
+            }
+        } else {
+            console.log("Error Cannot Exceed 22 digits")
+            if (num === 'AC') {
+                displayValue.splice(0, prevNum.length)
+                field.textContent = clear;
+            }
+        }
+        // console.log(p)
+        // console.log(this.id + " - clicked")
+    });
+});
+
+// OPERATIONS
+let add = function(firstOperand, secondOperand) {
+    return firstOperand + secondOperand;
+}
+
+let subract = function(firstOperand, secondOperand) {
+    return firstOperand - secondOperand;
+}
+
+let divide = function(firstOperand, secondOperand) {
+    return firstOperand / secondOperand;
+}
+
+let multiply = function(arr) {
+
+}
+
+let exponentiate = function(arr) {
+
+}
+
+let modulo = function(arr) {
+    
+}
+
+let clearField = function(display, arr) {
+    arr.splice(0, displayValue.length)
+    display.textContent = clear;
 }
 
 let negateNum = function(arr) {
 
 }
 
+let calculate = function(firstOperand, secondOperand) {
+    // Handle all functions in here
 
-let calculate = function(arr) {
-
+    return add(firstOperand, secondOperand);
 }
-
-document.querySelectorAll('.calcBtn').forEach(button => {
-    button.addEventListener('click', function() {
-        let numField = document.querySelector('.numField');
-        let field = document.querySelector('.field');
-        let num = this.getAttribute('data-target');
-        prevNum.push(num)
-        if (prevNum.length <= 22) {
-            if (num === 'AC') {
-                prevNum.splice(0, prevNum.length)
-                field.textContent = clear;
-            } else if (num === 'negate') {
-                console.log("Negate works")
-                prevNum.pop()
-            } else if (num === '=') {
-                console.log("Equals works")
-                prevNum.pop()
-            } else {
-                field.textContent = num;
-                field.textContent = prevNum.join("");
-            }
-        } else {
-            console.log("Error Cannot Exceed 22 digits")
-            if (num === 'AC') {
-                prevNum.splice(0, prevNum.length)
-                field.textContent = clear;
-            }
-        }
-        console.log(prevNum)
-        // console.log(this.id + " - clicked")
-    });
-});
